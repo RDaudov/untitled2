@@ -1,0 +1,172 @@
+@2Mac:         ~'1440px';
+@wDesktop:     ~'1800px';
+@wDesktopM:    ~'1366px';
+@wTabletWide:  ~'1300px';
+@wTabletWideM: ~'1200px';
+@wTablet:      ~'1100px';
+@wTabletM:     ~'767px';
+@wMobile:      ~'700px';
+@wMobileM:     ~'479px';
+
+
+/* Flex */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex_inline {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.flex_sb {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.flex_sw {
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%
+}
+.flex_ac {
+  -webkit-align-items: center;
+  align-items: center;
+}
+.flex_ab {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.flex_at {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.flex_hc {
+  justify-content: center;
+
+}
+.flex_hr {
+  justify-content: flex-end;
+
+}
+
+.flex_hl {
+  justify-content: flex-start;
+
+}
+.flex_center {
+  .flex_ac;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.flex_vertical {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.flex_wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.flex_no-wrap {
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.flex_grow {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+.flex_no-grow {
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+}
+.flex_no-shrink {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.flex_reverse{
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+.flex_reverse-column{
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+//.flex_reverse{
+//  align-items: stretch
+//}
+
+.clickable {
+  cursor: pointer;
+}
+
+.verticalMiddle{
+  top: 50%;
+  -ms-transform: translate(0,-50%); /* IE 9 */
+  -webkit-transform: translate(0,-50%); /* Chrome, Safari, Opera */
+  transform: translate(0,-50%);
+  position: absolute;
+}
+
+.itemCenter{
+  top: 50%;
+  left:50%;
+  -ms-transform: translate(-50%,-50%); /* IE 9 */
+  -webkit-transform: translate(-50%,-50%); /* Chrome, Safari, Opera */
+  transform: translate(-50%,-50%);
+  position: absolute;
+
+}
+.horizontalMiddle{
+  left: 50%;
+  -ms-transform: translate(-50%,0); /* IE 9 */
+  -webkit-transform: translate(-50%,0); /* Chrome, Safari, Opera */
+  transform: translate(-50%,0);
+  position: absolute;
+}
+
+
+.cssAnimate(@time:0.5s, @type:ease){
+  -moz-transition: all @time @type;
+  -o-transition: all @time @type;
+  -webkit-transition: all @time @type;
+
+}
+
+.cssRotate(@deg){
+  -ms-transform: rotate(@deg); /* IE 9 */
+  -webkit-transform: rotate(@deg); /* Chrome, Safari, Opera */
+  transform: rotate(@deg);
+
+}
+
+
+.fullSize(@positon:absolute){
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position:@positon;
+
+}
+
+.scale(@deg:0){
+  -ms-transform: scale(@deg); /* IE 9 */
+  -webkit-transform: scale(@deg); /* Chrome, Safari, Opera */
+  transform: scale(@deg);
+}
+
+.rotate(@deg:0){
+  -ms-transform: rotate(@deg); /* IE 9 */
+  -webkit-transform: rotate(@deg); /* Chrome, Safari, Opera */
+  transform: rotate(@deg);
+}
+.clearfix{
+  clear: both;
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+    height:1px;
+  }
+}
+
